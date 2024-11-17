@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.black-friday-banner {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.black-friday-banner label {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.black-friday-banner label:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.modal-details h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: black;
+}
+
+.modal-details a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent; 
+    transition: border-color 0.3s ease-in-out;
+}
+
+.modal-details a:hover {
+    border-bottom: 2px solid black;
+}
+
+.modal-toggle {
+    display: none;
+}
+
+.modal-toggle:checked ~ .modal {
+    display: flex;
+}
+
+.brand-icons {
+    display: inline-flex;
+    gap: 10px;
+}
+header {
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    gap: 20px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.middle-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    gap: 50px;
+}
+
+.middle-header .logo img {
+    width: 100px;
+    height: auto;
+}
+
+.middle-header .logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.middle-header nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.middle-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.middle-header .search-cart {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.middle-header .search-cart input {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+
+#adidas {
+    width: 40px; 
+    height: 40px;
+    margin: 0; 
+}
+
+
+.cover {
+    width: 55px; 
+    height: 32px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.shape {
+    width: 12px; 
+    height: 50px;
+    background: #111;
+    transform: rotate(329deg);
+    position: absolute;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.shape.s1 {
+    top: 25px; 
+    left: 10px;
+    animation: growShape 1s ease-in-out 0s forwards;
+    visibility: visible;
+    opacity: 1;
+}
+
+.shape.s2 {
+    top: 15px;
+    left: 25px;
+    animation: growShape 1s ease-in-out 1.5s forwards;
+    visibility: visible;
+}
+
+.shape.s3 {
+    top: 5px;
+    left: 50px;
+    transform-origin: bottom;
+    animation: growShape 2s ease-in-out 2s forwards;
+    visibility: visible;
+}
+
+
+@keyframes growShape {
+    0% {
+        transform: scaleY(0) rotate(329deg);
+        opacity: 0;
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(1) rotate(329deg);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
