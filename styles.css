@@ -20,6 +20,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .black-friday-banner label {
@@ -42,6 +44,7 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 10; 
 }
 
 
@@ -205,7 +208,7 @@ nav ul li a::after {
 
 .shape.s1 {
     top: 25px; 
-    left: 10px;
+    left: 13px;
     animation: growShape 1s ease-in-out 0s forwards;
     visibility: visible;
     opacity: 1;
@@ -257,5 +260,410 @@ nav ul li a {
     color: black;
     font-size: 16px;
     font-weight: bold;
+}
+
+
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ajusta o tamanho da imagem */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+/* Texto no canto inferior esquerdo */
+.hero-content {
+    position: absolute;
+    bottom: 20px; /* Alinhado no canto inferior */
+    left: 20px; /* Alinhado no canto esquerdo */
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
+    padding: 20px; /* Espaço interno no texto */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    max-width: 400px; /* Limite para o texto */
+}
+
+.hero-content h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+.gift-section {
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gift-content h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.gift-button {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.gift-button a {
+    text-decoration: none;
+    color: black;
+}
+
+.gift-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.gift-button:hover a {
+    color: white;
+}
+
+
+
+/* Image Gallery Section */
+.image-gallery-section {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-card {
+    flex: 1;
+    max-width: 600px; /* Ajuste para largura consistente */
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px; /* Bordas arredondadas */
+}
+
+.image-card img {
+    width: 100%; /* Largura total do contêiner */
+    height: 450px; /* Altura fixa para consistência */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: transform 0.3s ease-in-out; /* Animação ao passar o mouse */
+}
+
+.image-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.image-card img:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+.image-description {
+    margin-top: 15px;
+}
+
+.image-description h3 {
+    font-size: 1.5rem; /* Tamanho maior para título */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.shop-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 1px solid black;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.shop-link:hover {
+    color: gray;
+    border-color: gray;
+}
+
+/* Carousel Section */
+.carousel-section {
+    background-color: white;
+    padding: 30px 20px;
+}
+
+.carousel-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Espaço para scroll */
+    scrollbar-width: thin; /* Estiliza o scroll */
+}
+
+.carousel-slide {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-card {
+    flex: 0 0 300px; /* Cada card ocupa 300px */
+    scroll-snap-align: start;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+}
+
+.carousel-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar Styling */
+.carousel-container::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* Cor da barra de rolagem */
+    border-radius: 10px;
+}
+
+.carousel-container::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Cor do fundo da barra de rolagem */
+}
+
+
+
+/* Footer Section */
+.footer-section {
+    background-color: #111; /* Fundo do footer */
+    color: #fff;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden; /* Restringe a animação ao footer */
+}
+
+.footer-container {
+    display: flex; /* Usando Flexbox para organizar os itens */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite reorganizar em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px; /* Largura mínima para responsividade */
+    text-align: left;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f4f4f4;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Animation Section */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    padding: 40px 0; /* Espaço interno para acomodar a animação */
+    position: relative;
+}
+
+.logo1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative; /* Garante posicionamento dentro do footer */
+}
+
+.logo1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stripe {
+    height: 50px;
+    width: 70px;
+    background-color: white;
+    transform: skewY(10deg);
+}
+
+.stripe1 {
+    transform: rotate(70deg);
+    position: absolute;
+    margin-left: -43px;
+    margin-top: 14px;
+    border-radius: 100% 0;
+    animation-name: opacity;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.stripe2 {
+    transform: rotate(125deg);
+    border-radius: 100% 0;
+    animation-name: down;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.stripe3 {
+    transform: rotate(-70deg);
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 14px;
+    border-radius: 0 100%;
+    animation-name: opacity;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.leaf {
+    position: absolute;
+    width: 150px;
+    height: 8px;
+    background-color: #111;
+}
+
+.leaf1 {
+    margin-top: 10px;
+    animation-name: opacity;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.leaf2 {
+    margin-top: 20px;
+    animation-name: opacity;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+.leaf3 {
+    margin-top: 30px;
+    animation-name: opacity;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+/* ANIMATION */
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes down {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: 10%;
+    }
+    50% {
+        top: 20%;
+    }
+    75% {
+        top: 30%;
+    }
+    100% {
+        top: 0;
+    }
 }
 
