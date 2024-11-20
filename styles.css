@@ -10,6 +10,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+
+
 .black-friday-banner {
     width: 100%;
     background-color: black;
@@ -22,6 +25,10 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 2;
+}
+
+.black-friday-banner{
+    color: var(--secondary-color);
 }
 
 .black-friday-banner label {
@@ -182,27 +189,27 @@ nav ul li a::after {
 .search-cart {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre o campo de busca e o ícone */
+    gap: 10px; 
 }
 
 .search-cart input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    flex: 1; /* Faz o campo de busca ocupar o espaço restante */
+    flex: 1; 
 }
 
 .profile-icon img {
-    width: 30px; /* Tamanho do ícone */
+    width: 30px;
     height: 30px;
-    border-radius: 50%; /* Ícone redondo */
+    border-radius: 50%; 
     object-fit: cover;
-    cursor: pointer; /* Mostra o cursor de link ao passar */
+    cursor: pointer; 
     transition: transform 0.2s ease-in-out;
 }
 
 .profile-icon img:hover {
-    transform: scale(1.1); /* Pequeno zoom ao passar o mouse */
+    transform: scale(1.1); 
 }
 
 
@@ -296,27 +303,27 @@ nav ul li a {
 .hero-section {
     position: relative;
     width: 100%;
-    height: 80vh; /* Ajusta o tamanho da imagem */
+    height: 80vh; 
     overflow: hidden;
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-fit: cover; 
 }
 
-/* Texto no canto inferior esquerdo */
+
 .hero-content {
     position: absolute;
-    bottom: 20px; /* Alinhado no canto inferior */
-    left: 20px; /* Alinhado no canto esquerdo */
-    background-color: white; /* Fundo branco */
-    color: black; /* Texto preto */
-    padding: 20px; /* Espaço interno no texto */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    max-width: 400px; /* Limite para o texto */
+    bottom: 20px; 
+    left: 20px; 
+    background-color: white; 
+    color: black; 
+    padding: 20px; 
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
 }
 
 .hero-content h1 {
@@ -542,6 +549,8 @@ nav ul li a {
     margin: 0;
 }
 
+
+
 .footer-column ul li {
     margin-bottom: 10px;
     font-size: 0.9rem;
@@ -579,8 +588,8 @@ nav ul li a {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: auto; /* Permite que a altura se ajuste ao conteúdo */
-    padding: 40px 0; /* Espaço interno para acomodar a animação */
+    height: auto; 
+    padding: 40px 0; 
     position: relative;
 }
 
@@ -589,7 +598,7 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative; /* Garante posicionamento dentro do footer */
+    position: relative; 
 }
 
 .logo1 div {
@@ -702,7 +711,7 @@ nav ul li a {
     color: black;
     width: 50px;
     height: 50px;
-    border: 2px solid black; /* Linha redonda em preto */
+    border: 2px solid black; 
     border-radius: 50%;
     font-size: 16px;
     text-align: center;
@@ -710,13 +719,13 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s; /* Transição suave */
+    transition: all 0.3s; 
     z-index: 1000;
 }
 
 #backToTopBtn:hover {
-    background-color: black; /* Fundo preto */
-    color: white; /* Texto branco */
+    background-color: black; 
+    color: white; 
     cursor: pointer;
 }
 
@@ -726,19 +735,21 @@ nav ul li a {
 }
 
 
+
+
 @media (max-width: 577px) {
-    /* Esconde o banner Black Friday */
+   
     .black-friday-banner {
         display: none;
     }
 
-    /* Esconde o campo de busca e menu padrão */
+    
     .search-cart,
     nav {
         display: none !important;
     }
 
-    /* Botão de menu móvel */
+    
     .menu-toggle {
         display: block;
         position: fixed;
@@ -757,7 +768,7 @@ nav ul li a {
         cursor: pointer;
     }
 
-    /* Esconde o menu móvel inicialmente */
+    
     .mobile-menu {
         display: none;
         position: fixed;
@@ -775,12 +786,12 @@ nav ul li a {
         align-items: flex-start;
     }
 
-    /* Mostra o menu móvel ao marcar o checkbox */
+  
     #menu-toggle:checked ~ .mobile-menu {
         display: flex;
     }
 
-    /* Estiliza os links do menu móvel */
+    
     .mobile-menu ul {
         list-style: none;
         padding: 0;
@@ -789,65 +800,65 @@ nav ul li a {
     }
 
     .mobile-menu ul li {
-        margin-bottom: 30px; /* Espaço entre os links */
+        margin-bottom: 30px; 
         text-align: left;
     }
 
     .mobile-menu ul li a {
-        color: white; /* Links visíveis */
+        color: white; 
         text-decoration: none;
-        font-size: 1.8rem; /* Aumentado um pouco o tamanho dos links */
+        font-size: 1.8rem; 
     }
 
     .mobile-menu ul li a:hover {
-        color: #ddd; /* Links em cinza claro no hover */
+        color: #ddd; 
     }
 
-    /* Ajustes para Hero Content no celular */
+    
     .hero-content {
-        bottom: 10px; /* Ajusta para caber melhor em telas menores */
-        left: 10px; /* Diminui a margem lateral */
-        padding: 15px; /* Reduz o padding */
-        max-width: 90%; /* Expande para quase toda a largura */
+        bottom: 10px; 
+        left: 10px;
+        padding: 15px; 
+        max-width: 90%; 
     }
 
     .hero-content h1 {
-        font-size: 1.5rem; /* Reduz o tamanho do título */
+        font-size: 1.5rem; 
     }
 
     .hero-content p {
-        font-size: 0.9rem; /* Reduz o tamanho do parágrafo */
+        font-size: 0.9rem; 
     }
 
-    /* Ajustes para Image Gallery no celular */
+    
     .image-gallery {
-        flex-direction: column; /* Empilha as imagens */
-        align-items: center; /* Centraliza os cards */
+        flex-direction: column;
+        align-items: center; 
     }
 
     .image-card {
-        max-width: 90%; /* Cards ocupam quase toda a largura da tela */
-        margin-bottom: 20px; /* Espaço entre os cards */
+        max-width: 90%; 
+        margin-bottom: 20px; 
     }
 
     .image-card img {
-        border-radius: 10px; /* Mantém bordas arredondadas */
+        border-radius: 10px; 
     }
 
-    /* Ordenação de elementos no celular */
+    
     .search-cart {
-        order: 2; /* A barra de busca vai para o final */
-        width: 100%; /* Ocupa a largura total */
+        order: 2; 
+        width: 100%; 
         justify-content: flex-start;
     }
 
     .profile-icon {
-        order: 1; /* Ícone de perfil vem logo depois do menu */
+        order: 1; 
     }
 
     .menu-toggle {
-        display: block; /* Mostra o menu no mobile */
-        order: 0; /* O menu aparece primeiro */
+        display: block; 
+        order: 0;
     }
 }
 
